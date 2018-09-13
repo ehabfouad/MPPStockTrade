@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<HBox spacing="20" xmlns="http://javafx.com/javafx/8.0.65"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.mum.mpp.ui.controllers.TableCustomerController">
+	<VBox>
+		<VBox spacing="20" alignment="CENTER" minWidth="300"
+			prefWidth="300" prefHeight="200"
+			style="-fx-background-color: #01579B;">
+			<ImageView fitHeight="80.0" fitWidth="80.0"
+				pickOnBounds="true" preserveRatio="true">
+				<image>
+					<Image url="@account_circle.png" />
+				</image>
+			</ImageView>
+			<Label text="Admin" textFill="#FFFFFF" />
+		</VBox>
+		<VBox spacing="10" minWidth="300" prefWidth="300"
+			prefHeight="600" style="-fx-background-color: #FFFFFF;">
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMousePressed="#customer">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@customer.png" />
+					</image>
+				</ImageView>
+				<Label text="Customer" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#portfolio">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@portfolio.png" />
+					</image>
+				</ImageView>
+				<Label text="Portfolio" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#security">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@security.png" />
+					</image>
+				</ImageView>
+				<Label text="Security" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#account">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@account.png" />
+					</image>
+				</ImageView>
+				<Label text="Account" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#secDeal">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@secDeal.png" />
+					</image>
+				</ImageView>
+				<Label text="Security Deals" textFill="#01579B" />
+			</HBox>
+			<Separator />
+		</VBox>
+	</VBox>
+	<GridPane fx:id="main" minWidth="1000" minHeight="800" hgap="10" >
+		<padding>
+			<Insets top="25" right="25" bottom="10" left="25" />
+		</padding>
+		<HBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
+			<JFXButton text="Add" onAction="#add" />
+			<JFXButton id="deleteBtn" text="Delete" onAction="#delete" />
+		</HBox>
+		<JFXTreeTableView fx:id="treeView" prefHeight="400.0"
+			prefWidth="534.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+	</GridPane>
+	<stylesheets>
+		<URL value="@main.css" />
+	</stylesheets>
+</HBox>

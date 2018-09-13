@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<HBox spacing="20" xmlns="http://javafx.com/javafx/8.0.65"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.mum.mpp.ui.controllers.AddSecurityController">
+	<VBox>
+		<VBox spacing="20" alignment="CENTER" minWidth="300"
+			prefWidth="300" prefHeight="200"
+			style="-fx-background-color: #01579B;">
+			<ImageView fitHeight="80.0" fitWidth="80.0"
+				pickOnBounds="true" preserveRatio="true">
+				<image>
+					<Image url="@account_circle.png" />
+				</image>
+			</ImageView>
+			<Label text="Admin" textFill="#FFFFFF" />
+		</VBox>
+		<VBox spacing="10" minWidth="300" prefWidth="300"
+			prefHeight="600" style="-fx-background-color: #FFFFFF;">
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#customer">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@customer.png" />
+					</image>
+				</ImageView>
+				<Label text="Customer" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#portfolio">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@portfolio.png" />
+					</image>
+				</ImageView>
+				<Label text="Portfolio" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#security">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@security.png" />
+					</image>
+				</ImageView>
+				<Label text="Security" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#account">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@account.png" />
+					</image>
+				</ImageView>
+				<Label text="Account" textFill="#01579B" />
+			</HBox>
+			<Separator />
+			<HBox spacing="20" alignment="CENTER_LEFT"
+				onMouseClicked="#secDeal">
+				<padding>
+					<Insets bottom="20" left="20" right="20" top="20" />
+				</padding>
+				<ImageView fitHeight="40.0" fitWidth="40.0"
+					pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@secDeal.png" />
+					</image>
+				</ImageView>
+				<Label text="Security Deals" textFill="#01579B" />
+			</HBox>
+			<Separator />
+		</VBox>
+	</VBox>
+	<AnchorPane id="AnchorPane" prefHeight="302.0"
+		prefWidth="400.0">
+		<children>
+			<Pane layoutX="25.0" layoutY="20.0" prefHeight="270.0"
+				prefWidth="350.0" style="-fx-background-color: #ffffff;">
+				<children>
+					<JFXTextField fx:id="securityId" labelFloat="true"
+						layoutX="25.0" layoutY="28.0" prefHeight="30.0" prefWidth="250.0"
+						promptText="Security Id" />
+					<JFXTextField fx:id="name" labelFloat="true"
+						layoutX="25.0" layoutY="80.0" prefHeight="30.0" prefWidth="250.0"
+						promptText="Name" />
+					<JFXTextField fx:id="type" labelFloat="true"
+						layoutX="25.0" layoutY="132.0" prefHeight="30.0" prefWidth="250.0"
+						promptText="Type" />
+					<JFXTextField fx:id="price" labelFloat="true"
+						layoutX="25.0" layoutY="184.0" prefHeight="30.0" prefWidth="250.0"
+						promptText="Price" />
+					<JFXButton fx:id="add" onAction="#add" layoutX="25.0"
+						layoutY="232.0" ripplerFill="WHITE" text="Add"
+						textAlignment="CENTER" textFill="WHITE" />
+					<JFXButton fx:id="deleteBtn" onAction="#cancel"
+						layoutX="180.0" layoutY="232.0" ripplerFill="WHITE" text="Cancel"
+						textAlignment="CENTER" textFill="WHITE" />
+				</children>
+				<effect>
+					<DropShadow blurType="GAUSSIAN" />
+				</effect>
+			</Pane>
+		</children>
+	</AnchorPane>
+
+	<stylesheets>
+		<URL value="@main.css" />
+	</stylesheets>
+</HBox>

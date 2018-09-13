@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: Roboto;
+    src: url('Roboto-Regular.ttf');
+}
+HBox {
+-fx-font-family: 'Roboto';
+
+}
+Label {
+-fx-font-size: 20;
+}
+
+#next {
+     -jfx-button-type: RAISED;
+     -fx-background-color: blue;
+     -fx-text-fill: white;
+     -fx-pref-height: 30px;
+     -fx-pref-width: 150px;
+     -fx-font-size: 15;
+}
+
+
+#deleteBtn  {
+     -jfx-button-type: RAISED;
+     -fx-background-color: red;
+     -fx-text-fill: white;
+     -fx-pref-height: 30px;
+     -fx-pref-width: 150px;
+     -fx-font-size: 15;
+}
+
+.jfx-text-field{
+     -jfx-focus-color:  #2196f3;
+     -fx-pref-width: 300px; 
+     -fx-font-size: 15;
+}
